@@ -14,7 +14,6 @@ const useApi = () => {
     try {
       const response = await axios.get(HeroApi);
       setHeroes(response.data);
-      console.log(response.data);
     } catch (error) {
       console.error(error);
       setHeroes([]);

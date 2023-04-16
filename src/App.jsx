@@ -5,7 +5,11 @@ import { useState, useEffect } from "react";
 
 import useApi from "./useApi";
 function App() {
-  const { heroList, fetchHeroes } = useApi();
+  const { heroList, fetchHeroes, heroes } = useApi();
+
+  useEffect(() => {
+    fetchHeroes();
+  }, [fetchHeroes()]);
 
   return (
     <div className="justify-center w-full h-screen gap-12 p-12 overflow-hidden overflow-y-scroll bg-black">

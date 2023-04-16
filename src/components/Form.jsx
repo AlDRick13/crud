@@ -11,10 +11,6 @@ const Form = ({ handleClose }) => {
     imageUrl: "",
   });
 
-  useEffect(() => {
-    fetchHeroes();
-  }, []);
-
   const handlePost = () => {
     createHero(state);
     fetchHeroes();
@@ -28,7 +24,6 @@ const Form = ({ handleClose }) => {
         [target.name]: target.value,
       };
     });
-    console.log(state);
   };
   return (
     <div

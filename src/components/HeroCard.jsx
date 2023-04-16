@@ -4,15 +4,10 @@ import { HeroApi } from "../endpoints";
 
 const HeroCard = ({ name, firstName, lastName, imageUrl, place, id }) => {
   const handleDelete = () => {
-    console.log(id);
     axios
       .delete(`${HeroApi}/${id}`)
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      .then((response) => {})
+      .catch((error) => {});
   };
   return (
     <div className="text-white p-3 bg-gradient-to-r from-indigo-900 to-green-900 h-[350px] w-[250px] rounded">
